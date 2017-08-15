@@ -6,7 +6,8 @@ google map and useable Facebook and Twitter widgets.
 
 ## Getting Started
 
-Installation is easy simply clone the repository and cd the run NPM install. Once dependencies are installed run gulp in cli.
+Installation is easy simply clone the repository and cd the run NPM install. Once dependencies are installed run gulp in cli.  
+A running version can be found at [this link](https://milesaylward.github.io/ticketmaster/)
 
 ## Built With
 
