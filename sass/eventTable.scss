@@ -1,0 +1,109 @@
+@import "variables.scss"
+
+table.responsive-table td:empty:before {
+  content: '\00a0';
+}
+
+.table-container {
+  width: 80%;
+  padding: 25px 0;
+  margin: auto;
+}
+
+table.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  position: relative;
+  font-size: 26px;
+  color: white;
+  opacity: 0;
+  transition: opacity 1.25s ease-in-out;
+  .table-event {
+    background-color: inherit;
+    transition: background-color .5s ease;
+  }
+
+  .table-event:hover {
+    cursor: pointer;
+    background-color: rgba(230, 230, 230, .35);
+  }
+  th,td {
+    margin: 0;
+    vertical-align: top;
+    min-height: 66px;
+  }
+
+  thead {
+    display: block;
+    float: left;
+    border: 0;
+    border-right: 1px solid #d0d0d0;
+
+    tr {
+      display: block;
+      padding: 0 10px 0 0;
+
+
+      th::before {
+        content: "\00a0";
+      }
+    }
+  }
+
+  tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    tr {
+      white-space: normal;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 10px;
+      width: 50%;
+    }
+  }
+
+  th {
+    display: block;
+    text-align: right;
+  }
+  td {
+    display: block;
+
+    text-align: left;
+  }
+
+}
+
+table.responsive-table.loaded {
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 908px) {
+  table.responsive-table {
+    font-size: 20px;
+  }
+  .responsive-table thead {
+    max-width: 103px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  table.responsive-table tbody tr {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .table-container {
+    width: 90%;
+  }
+}

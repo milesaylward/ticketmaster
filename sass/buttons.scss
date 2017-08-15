@@ -1,0 +1,17 @@
+.button-container {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  transition: all 1s ease;
+  flex-wrap: wrap;
+  .action-btn {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .button-container {
+    width: 100%
+  }
+}

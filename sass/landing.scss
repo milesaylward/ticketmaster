@@ -1,0 +1,80 @@
+@import "variables.scss";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateX(-1000px);
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  color: white;
+
+  .landing-search {
+    margin: 50px auto;
+
+    input {
+      height: 45px;
+      width: 40vw;
+      font-size: 41px;
+      @include font-weight(bold);
+      color: white;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      text-align: center;
+    }
+
+    input::placeholder {
+      color: white;
+      font-size: 41px;
+      @include font-weight(bold);
+      text-align: center;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
+
+  .btn-container {
+    text-align: center;
+    flex-wrap: wrap;
+
+    h3 {
+      font-size: 26px;
+    }
+
+    .artist-btn {
+      width: 200px;
+      margin: 10px 10px;
+    }
+  }
+}
+
+.form-container.loaded {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+@media screen and (max-width: 665px) {
+  .form-container{
+    h1 {
+      font-size: 46px
+    }
+    .landing-search {
+      input {
+        width: 70vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .form-container{
+    .landing-search {
+      input {
+        width: 90vw;
+      }
+    }
+  }
+}

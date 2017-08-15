@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+@mixin font-weight($weight) {
+    $weights: (
+      normal: 400,
+      bold: 800
+    );
+
+    $output: $weight;
+    @if map-has-keys($weights, $weight){
+      $output: map-get($weights, $weight);
+    }
+    font-weight: $output;
+}
+
+$main: 'Montserrat';
+$circle-green: #2ECC71;
+$line-green: #1ABC9C;
+$gray: #eee;
